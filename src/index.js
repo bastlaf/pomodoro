@@ -1,37 +1,30 @@
 import React from "react";
-import { render } from "react-dom";
+import {render} from "react-dom";
 
-
+console.log("test2");
 class Timer extends React.Component {
     constructor(props) {
-      super(props);
-      this.state = { seconds: 0 };
+        super(props);
+        this.state = {seconds: 0};
     }
-  
+
     tick() {
-      this.setState(state => ({
-        seconds: state.seconds + 1
-      }));
+        this.setState(state => ({
+            seconds: state.seconds + 1,
+        }));
     }
-  
+
     componentDidMount() {
-      this.interval = setInterval(() => this.tick(), 1000);
+        this.interval = setInterval(() => this.tick(), 1000);
     }
-  
+
     componentWillUnmount() {
-      clearInterval(this.interval);
+        clearInterval(this.interval);
     }
-  
+
     render() {
-      return (
-        <div>
-          Seconds: {this.state.seconds}
-        </div>
-      );
+        return <div>{this.state.seconds}</div>;
     }
-  }
-  
-  render(
-    <Timer />,
-    document.getElementById('timer-example')
-  );
+}
+
+render(<Timer />, document.querySelector("#timer-example"));
