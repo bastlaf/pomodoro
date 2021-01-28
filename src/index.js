@@ -1,16 +1,16 @@
 import React from "react";
-import {render} from "react-dom";
+import ReactDOM from "react-dom";
 import "./scss/app.scss";
 
 console.log("test2");
 
-class HelloMessage extends React.Component {
-    render() {
-        return <div>{`Hello ${this.props.name}`}</div>;
-    }
-}
+let seconds = 60;
+let count = 0;
 
-render(
-    <HelloMessage name={"Taylor"} />,
-    document.querySelector("#hello-example"),
-);
+function chrono() {
+    seconds = seconds - 1;
+    count = count + 1;
+    const elementSeconds = <p>{seconds}</p>;
+    ReactDOM.render(elementSeconds, document.querySelector(".hour"));
+}
+setInterval(chrono, 1000);
