@@ -1,30 +1,16 @@
 import React from "react";
 import {render} from "react-dom";
+import "./scss/app.scss";
 
 console.log("test2");
-class Timer extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {seconds: 0};
-    }
 
-    tick() {
-        this.setState(state => ({
-            seconds: state.seconds + 1,
-        }));
-    }
-
-    componentDidMount() {
-        this.interval = setInterval(() => this.tick(), 1000);
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.interval);
-    }
-
+class HelloMessage extends React.Component {
     render() {
-        return <div>{this.state.seconds}</div>;
+        return <div>{`Hello ${this.props.name}`}</div>;
     }
 }
 
-render(<Timer />, document.querySelector("#timer-example"));
+render(
+    <HelloMessage name={"Taylor"} />,
+    document.querySelector("#hello-example"),
+);

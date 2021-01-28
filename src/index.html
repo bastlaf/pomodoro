@@ -3,11 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">   
     <title>Document</title>
 </head>
 <body>
-    <div id="timer-example"></div>
-    <h1>yo le rap, you le rap</h1>
+    <div class="boxContenu">
+        <h1>POMODORO</h1>
+        
+        <div class="btnSelecteur">
+            <div class="selecteurTimer">
+                <h2 class="titleSelecteur">SESSION TIME</h2>
+                <div class="session">
+                    <div class="sessionBtnMoinsCircle1">
+                        <div class="sessionBtnMoinsCircle2">
+                            <button class="sessionBtnMoinsCircle3">
+                                <p class="textMoins">-</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sessionNumberCircle1">
+                        <div class="sessionNumberCircle2">
+                            <div id="sessionTimeNumber" class="sessionNumberCircle3">5</div>
+                        </div>
+                    </div>
+                    <div class="sessionBtnPlusCircle1">
+                        <div class="sessionBtnPlusCircle2">
+                            <button class="sessionBtnPlusCircle3">
+                                <p class="textPlus">+</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selecteurBreack">
+                <h2 class="titleSelecteur">BREACK TIME</h2>
+                <div class="session">
+                    <div class="sessionBtnMoinsCircle1">
+                        <div class="sessionBtnMoinsCircle2">
+                            <button class="sessionBtnMoinsCircle3">
+                                <p class="textMoins">-</p>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="sessionNumberCircle1">
+                        <div class="sessionNumberCircle2">
+                            <div class="sessionNumberCircle3">5</div>
+                        </div>
+                    </div>
+                    <div class="sessionBtnPlusCircle1">
+                        <div class="sessionBtnPlusCircle2">
+                            <button class="sessionBtnPlusCircle3">
+                                <p class="textPlus">+</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+            <div class="black">
+                <p class="hour">53:46</p>
+            </div>
+
+        <div class="btnPlayAndReset">
+            <div class="play1">
+                <div class="play2">
+                    <button class="play3">PLAY</button>
+                </div>
+            </div>
+            <div class="reset1">
+                <div class="reset2">
+                    <button class="reset3">RESET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./index.js"></script>
 </body>
 </html>
