@@ -70,7 +70,7 @@ function App() {
             //decrement time left by one every second (1000ms)
             const newIntervalId = setInterval(() => {
                 setTimeLeft(previousTimeLeft => previousTimeLeft - 1);
-            }, 100);
+            }, 1000);
             setIntervalId(newIntervalId);
         }
     };
